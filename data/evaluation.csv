@@ -1,0 +1,21 @@
+question,expected_top_id,expect_answer
+상품 문의는 어디에서 하나요?,faq-contact,1
+상품 질문은 Q/A에서 접수하나요?,faq-contact,1
+Q/A 게시판으로 상품 문의가 가능한가요?,faq-contact,1
+결제 후 배송 준비는 언제 하나요?,faq-shipping,1
+배송은 언제 시작하나요?,faq-shipping,1
+정확한 도착일을 알 수 있나요?,faq-shipping,1
+교환 및 반품 기간은 어떻게 확인하나요?,faq-return,1
+반품 기간이 며칠인가요?,faq-return,1
+CABLE TOP은 어떤 옷인가요?,product-top,1
+TOP에 티셔츠가 있나요?,product-top,1
+CABLE BOTTOM에는 어떤 상품이 있나요?,product-bottom,1
+BOTTOM은 팬츠 중심인가요?,product-bottom,1
+블랙 티셔츠에 어울리는 팬츠는?,styling-black,1
+차콜 또는 브라운 팬츠 코디는?,styling-black,1
+예시 재고가 실제 재고인가요?,stock-policy,1
+실시간 판매 재고와 연동되나요?,stock-policy,1
+실제 주문 전에 재고를 확인해야 하나요?,stock-policy,1
+우주선의 이름은 무엇인가요?,,0
+외계 행성의 온도는 얼마인가요?,,0
+달 표면의 중력은 몇인가요?,,0

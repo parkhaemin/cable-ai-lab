@@ -1,0 +1,9 @@
+[
+  {"id":"faq-contact","source":"faq","title":"상품 문의","content":"상품 문의는 CABLE Q/A 게시판을 통해 접수할 수 있습니다."},
+  {"id":"faq-shipping","source":"faq","title":"배송 안내","content":"결제가 완료된 주문은 순차적으로 배송 준비를 시작합니다. 정확한 도착일은 주문 상태와 택배 상황에 따라 달라집니다."},
+  {"id":"faq-return","source":"faq","title":"교환 및 반품","content":"교환·반품 가능 여부와 기간은 구매한 판매처의 공지 및 주문 상세 안내를 확인해 주세요. 이 학습용 자료에는 확정된 기간이 없습니다."},
+  {"id":"product-top","source":"product","title":"CABLE TOP","content":"CABLE TOP은 일상 코디에 어울리는 여유로운 티셔츠를 중심으로 구성한 학습용 상품 분류입니다."},
+  {"id":"product-bottom","source":"product","title":"CABLE BOTTOM","content":"CABLE BOTTOM은 데일리 코디가 쉬운 팬츠 중심의 학습용 상품 분류입니다."},
+  {"id":"styling-black","source":"styling","title":"블랙 티셔츠 스타일링","content":"블랙 티셔츠에는 차콜 또는 브라운 팬츠를 매치하면 차분한 톤의 코디를 구성할 수 있습니다. 개인 취향과 계절에 따라 달라질 수 있습니다."},
+  {"id":"stock-policy","source":"faq","title":"재고 안내","content":"이 실습 자료의 재고 숫자는 예시이며 실시간 판매 재고와 연동되지 않습니다. 실제 주문 전에 판매처에서 재고를 확인해야 합니다."}
+]

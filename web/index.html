@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CABLE — AI Atelier</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CABLE 첫 화면"><span class="brand-name">CABLE</span><span class="developer-credit">Developer Hae Min Park</span></a>
+    <div class="header-right"><span class="header-line">FASHION × INTELLIGENCE</span><span id="modeBadge" class="mode-badge">모드 확인 중</span></div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow light">CABLE / AI STUDY LAB · 01</div>
+        <h1 id="heroTitle">Style is a question.<br><em>Evidence is an answer.</em></h1>
+        <p>상품을 고르고 질문하세요. 답변뿐 아니라 검색한 근거와 사용한 도구까지 살펴볼 수 있습니다.</p>
+        <a class="hero-link" href="#workspace">실습 시작하기 <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="블랙 티셔츠와 브라운 팬츠의 패션 스틸라이프"></div>
+      <span class="hero-caption">CABLE EDITORIAL / LAB EDITION</span>
+    </section>
+    <div class="ticker" aria-label="학습 흐름"><span>01 SELECT PRODUCT</span><span>02 ASK A QUESTION</span><span>03 INSPECT EVIDENCE</span><span>04 REVIEW TOOL CALLS</span></div>
+    <section id="workspace" class="workspace">
+      <div class="intro">
+        <div><div class="eyebrow">INTERACTIVE WORKSPACE</div><h2>질문에서 답변까지,<br>보이는 AI 실습</h2></div>
+        <p>같은 화면에서 <strong>RAG 검색</strong>과 <strong>Agent 도구</strong>를 비교합니다. 상품 정보와 가격은 학습용 예시입니다.</p>
+      </div>
+      <div class="workspace-grid">
+        <section class="input-panel" aria-labelledby="inputTitle">
+          <div class="panel-heading"><span class="step">01 / INPUT</span><h3 id="inputTitle">입력을 구성합니다</h3></div>
+          <div class="field-label">PRODUCT / 상품 선택 <small>선택하지 않아도 질문할 수 있습니다</small></div>
+          <div id="productList" class="product-list" aria-label="예시 상품"></div>
+          <div class="field-label pipeline-label">METHOD / 처리 방식</div>
+          <div class="segmented" role="group" aria-label="처리 방식">
+            <button class="segment active" type="button" data-pipeline="rag" aria-pressed="true">RAG · 문서 근거</button>
+            <button class="segment" type="button" data-pipeline="agent" aria-pressed="false">AGENT · 도구 호출</button>
+          </div>
+          <label class="field-label" for="question">QUESTION / 자연어 질문</label>
+          <textarea id="question" rows="3" maxlength="500" placeholder="예: 상품 문의는 어디에서 하나요?"></textarea>
+          <div class="suggestions">
+            <button type="button" data-question="상품 문의는 어디에서 하나요?" data-method="rag">상품 문의는 어디에서 하나요?</button>
+            <button type="button" data-question="블랙 티셔츠에 어울리는 팬츠는?" data-method="rag">블랙 티셔츠 스타일링</button>
+            <button type="button" data-question="T01 2개 가격은 얼마인가요?" data-method="agent">T01 2개 가격은?</button>
+          </div>
+          <button id="askButton" class="primary-button" type="button">질문 실행하기 <span aria-hidden="true">↗</span></button>
+          <p class="microcopy">데모 모드는 로컬 검색·규칙으로 실행됩니다. 실제 모델 사용 여부는 결과에 표시됩니다.</p>
+        </section>
+        <section class="output-panel" aria-labelledby="outputTitle">
+          <div class="panel-heading"><span class="step">02 / PROCESS & OUTPUT</span><h3 id="outputTitle">과정을 확인합니다</h3></div>
+          <div id="result" class="result-card" aria-live="polite">
+            <span class="result-overline">READY TO EXPLORE</span>
+            <p class="empty-text">왼쪽에서 상품과 질문을 선택하면 검색 근거와 결과가 이곳에 표시됩니다.</p>
+          </div>
+          <div class="process-label">PROCESS NOTES</div>
+          <div id="process" class="process-grid">
+            <div class="process-empty">질문을 실행하면 문서의 유사도 또는 도구 호출 기록을 표시합니다.</div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="method-section">
+      <div><span class="eyebrow">INSIDE THE SYSTEM</span><h2>실습의 안쪽</h2></div>
+      <div class="method-cards">
+        <article><span>01</span><h3>Retrieve</h3><p>질문과 관련된 문서를 찾고 유사도를 확인합니다.</p></article>
+        <article><span>02</span><h3>Ground</h3><p>찾은 자료를 근거로 답하고 출처 id를 표시합니다.</p></article>
+        <article><span>03</span><h3>Act</h3><p>상품 검색·가격 계산 도구의 입력과 출력을 기록합니다.</p></article>
+      </div>
+    </section>
+  </main>
+  <form id="mobileSearch" class="mobile-search" role="search" aria-label="모바일 빠른 질문">
+    <div class="mobile-search-meta"><span id="mobilePipelineLabel">RAG · 문서 근거</span><span id="mobileProductLabel">상품 선택 없이 질문</span></div>
+    <div class="mobile-search-row">
+      <label class="visually-hidden" for="mobileQuestion">AI에 질문하기</label>
+      <input id="mobileQuestion" type="search" maxlength="500" placeholder="상품이나 스타일을 질문하세요" autocomplete="off" enterkeyhint="search">
+      <button id="mobileAskButton" type="submit" aria-label="질문 실행하기">질문하기 <span aria-hidden="true">↗</span></button>
+    </div>
+  </form>
+  <footer><strong>CABLE</strong><span>AI ATELIER / EDUCATION DEMO</span><span>Sample data · No purchases</span></footer>
+</body>
+</html>
